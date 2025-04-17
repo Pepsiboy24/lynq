@@ -1,0 +1,235 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	scrollbar-color: unset;
+	font-family: "Montserrat", "Open Sans", Roboto;
+	font-size: 1rem;
+}
+body {
+	background-color: #eef0f5;
+}
+h5 {
+	font-weight: 600;
+}
+
+nav .top-nav {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-nav img[alt="logo"] {
+	width: 100px;
+	margin-left: 4vw;
+}
+.top-nav .fa-bars {
+	margin-right: 4vw;
+}
+.bottom-nav {
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-box {
+	height: 100%;
+	display: flex;
+}
+.search-box #search-event {
+	width: 300px;
+	padding: 5px 3px 5px 10px;
+	border: 2px solid #1c2136;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	color: #1c2136;
+}
+.search-box button {
+	height: 100%;
+	width: 100px;
+	background-color: #1c2136;
+	color: #fff;
+	border: none;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	position: relative;
+	left: -2px;
+}
+.search-box button > i {
+	display: none;
+}
+.trending-section {
+	padding: 1vw 0 2vw 2vw;
+}
+.trending-section h5 {
+	padding-bottom: 1vw;
+}
+.trending-events-wrapper {
+	width: 98vw;
+	overflow-x: scroll;
+}
+.trending-events {
+	width: fit-content;
+	display: flex;
+	gap: 1vw;
+}
+.trending-event-card {
+	width: 340px;
+	height: 200px;
+	background-color: #004aad;
+	border-radius: 7px;
+	position: relative;
+}
+.trending-event-card:hover {
+	cursor: pointer;
+}
+/* This event date styling applies to both trending and all events section */
+.event-date {
+	width: 50px;
+	height: 50px;
+	border-radius: 7px;
+	background-color: #eef0f5;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.event-date .month {
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+.event-date .day {
+	font-weight: 900;
+}
+.all-events-section {
+	padding: 1vw 2vw 2vw 2vw;
+}
+.all-events-section h5 {
+	padding-bottom: 1vw;
+}
+.all-events {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	justify-content: center;
+}
+.event-card {
+	width: 100%;
+}
+.event-card:hover {
+	cursor: pointer;
+}
+.event-card .event {
+	width: 100%;
+	height: 250px;
+	border-radius: 7px;
+	background-color: #004aad;
+	position: relative;
+	overflow: hidden;
+}
+.event-card .details {
+	width: 100%;
+	height: fit-content;
+	position: absolute;
+	bottom: 0;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+	
+}
+.details h4,
+.details h5 {
+	padding: 0;
+	color: #eef0f5;
+}
+.details h4 {
+	margin-top: 0.5rem;
+	font-size: 1.3rem;
+}
+
+/* Limit responsivenes to 2000px */
+@media screen and (max-width: 600px) {
+	.trending-section,
+	.all-events-section {
+		padding: 20px;
+	}
+	.trending-events-wrapper {
+		width: 100%;
+	}
+	.trending-events {
+		gap: 15px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.trending-event-card {
+		width: 280px;
+		height: 180px;
+	}
+	.event-date {
+		width: 40px;
+		height: 40px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.search-box #search-event {
+		width: 300px;
+	}
+	.search-box button {
+		width: 2rem;
+		border-radius: 7px;
+		left: -5px;
+	}
+	.search-box button .search-text {
+		display: none;
+	}
+	.search-box button > i {
+		display: block;
+	}
+	.all-events-section {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.all-events {
+		padding: 0px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.search-box #search-event {
+		width: calc(90vw - 2rem);
+	}
+}
+/* Grid items */
+@media screen and (min-width: 600px) {
+	.all-events {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (min-width: 950px) {
+	.all-events {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (min-width: 1400px) {
+	.all-events {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+@media screen and (min-width: 1500px) {
+	.bottom-nav {
+		height: 3rem;
+	}
+	.search-box {
+		height: 100%;
+	}
+	.search-box #search-event {
+		width: 450px;
+		height: 100%;
+		padding: 5px 3px 5px 10px;
+	}
+	.search-box button {
+		height: 100%;
+	}
+}

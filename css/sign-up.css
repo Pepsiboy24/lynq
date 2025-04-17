@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	scrollbar-color: unset;
+	font-family: "Montserrat", "Open Sans", Roboto;
+	font-size: 1rem;
+}
+nav {
+	background-color: #004aad;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 0px 30px 0px;
+}
+nav .top-nav {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-nav img[alt="logo"] {
+	width: 100px;
+	margin-left: 4vw;
+}
+.top-nav .fa-bars {
+	margin-right: 4vw;
+	color: #fff;
+}
+.bottom-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bottom-nav h1 {
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.login-box-wrapper {
+	width: 100vw;
+	height: calc(100vh - 25vh);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.login-box {
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
+}
+.login-box .top {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.login-box .top input[name="password"],
+.login-box .top input[name="username"],
+.login-box .top input[name="name"],
+.login-box .top input[name="con-password"],
+.login-box .top input[name="email"],
+.login-box .top input[name="phone"] {
+	width: 350px;
+	padding: 10px 3px;
+	border: none;
+	border-bottom: 1.2px solid #1c2136;
+	outline: none;
+}
+.login-box .top input[name="password"]::placeholder,
+.login-box .top input[name="username"]::placeholder,
+.login-box .top input[name="name"]::placeholder,
+.login-box .top input[name="con-password"]::placeholder,
+.login-box .top input[name="email"]::placeholder,
+.login-box .top input[name="phone"]::placeholder {
+	color: #1c2136;
+	font-weight: 450;
+}
+.login-box .bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+}
+.login-box .bottom button {
+	width: fit-content;
+	padding: 10px 40px;
+	background-color: #004aad;
+	border: none;
+	color: #fff;
+	border-radius: 7px;
+	transition: all ease-out 0.2s;
+}
+.login-box .bottom button:hover {
+	cursor: pointer;
+	padding: 15px 50px;
+	text-decoration: underline;
+	border-radius: 15px;
+}
+.errMsg{
+	width: 80%; 
+	height: 50px; 
+	border: 1px solid #ff0000; 
+	color: #ff0000; 
+	margin: 20px; 
+	display:none;
+	justify-content: center;
+	align-items: center;
+}
+.show{
+	display: flex
+}
+
+/* Responsiveness: at most 2000px*/
+@media screen and (max-width: 450px) {
+	nav {
+		border-bottom-right-radius: 12px;
+		border-bottom-left-radius: 12px;
+		padding-bottom: 50px;
+	}
+	.login-box-wrapper {
+		height: calc(100vh - 30vh);
+	}
+	.login-box {
+		width: 80%;
+	}
+	.login-box .top input[name="password"],
+	.login-box .top input[name="username"],
+	.login-box .top input[name="name"],
+	.login-box .top input[name="con-password"],
+	.login-box .top input[name="email"],
+	.login-box .top input[name="phone"] {
+		width: 100%;
+	}
+}
