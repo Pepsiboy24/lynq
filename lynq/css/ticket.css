@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	scrollbar-color: unset;
+	font-family: "Montserrat", "Open Sans", Roboto;
+	font-size: 1rem;
+}
+body {
+	background-color: #1c2136;
+}
+nav {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 0px 30px 0px;
+}
+nav .top-nav {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-nav img[alt="logo"] {
+	width: 100px;
+	margin-left: 4vw;
+}
+.top-nav .fa-bars {
+	margin-right: 4vw;
+	color: #fff;
+}
+.ticket-wrapper {
+	width: 100vw;
+	height: calc(100vh - 25vh);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.ticket-box {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+.ticket-box .top {
+	display: flex;
+	justify-content: center;
+}
+.top .text {
+	color: #eef0f5;
+}
+.middle {
+	width: 600px;
+	height: 60vh;
+	background-color: #004aad;
+	position: relative;
+	border-radius: 7px;
+	background-color: #004aad;
+	position: relative;
+}
+.middle .event-date {
+	width: 50px;
+	height: 50px;
+	border-radius: 7px;
+	background-color: #eef0f5;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.middle .event-date .month {
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+.middle .event-date .day {
+	font-weight: 900;
+}
+.middle .event {
+	width: 100%;
+	height: 250px;
+}
+.middle .details {
+	width: 100%;
+	height: fit-content;
+	position: absolute;
+	bottom: 0;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+}
+.details .more-info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.more-info h5 {
+	font-weight: 550;
+}
+.details h4,
+.details h5 {
+	padding: 0;
+	color: #eef0f5;
+}
+.details h4 {
+	margin-top: 0.4rem;
+	font-size: 1.3rem;
+}
+.ticket-box .bottom {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	position: relative;
+}
+.ticket-box .bottom button {
+	width: fit-content;
+	padding: 15px 40px;
+	background-color: #004aad;
+	border: none;
+	color: #fff;
+	border-radius: 7px;
+	transition: all ease-out 0.2s;
+}
+.ticket-box .bottom button:hover {
+	cursor: pointer;
+	padding: 0px 50px;
+	text-decoration: underline;
+	border-radius: 15px;
+}
+.ticket-box .bottom #down {
+	background-color: #f88c30;
+}
+
+/* Responsiveness: at most 2000px*/
+@media screen and (max-width: 768px) {
+	.ticket-box .middle {
+		width: 80vw;
+		height: 50vh;
+	}
+	.ticket-box .bottom button {
+		padding: 15px 25px;
+	}
+}
+@media screen and (max-width: 450px) {
+	nav {
+		border-bottom-right-radius: 12px;
+		border-bottom-left-radius: 12px;
+		padding-bottom: 50px;
+	}
+	.ticket-wrapper {
+		height: calc(100vh - 30vh);
+	}
+	.ticket-box {
+		gap: 15px;
+	}
+}
