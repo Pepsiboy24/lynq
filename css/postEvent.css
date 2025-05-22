@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	scrollbar-color: unset;
+	font-family: "Montserrat", "Open Sans", Roboto;
+	font-size: 1rem;
+}
+nav {
+	background-color: #004aad;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 0px 30px 0px;
+}
+nav .top-nav {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-nav img[alt="logo"] {
+	width: 100px;
+	margin-left: 4vw;
+}
+.top-nav .fa-bars {
+	margin-right: 4vw;
+	color: #fff;
+}
+.bottom-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bottom-nav h1 {
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.wrapper{
+	width: 100vw;
+	height: calc(100vh - 21vh);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper > input, .eventDate > input, .eventThumbnail > input{
+    padding: 10px;
+    margin: 10px;
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+.eventDate{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10px;
+}
+.eventDate > input{
+    width: 100%;
+    margin: 0;
+}
+.eventThumbnail{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10px;
+}
+.eventThumbnail > input{
+    width: 100%;
+    margin: 0;
+}
+.eventThumbnail > label, .eventDate > input{
+    margin-bottom: 10px;
+}
+.wrapper > button{
+    padding: 20px;
+    /* width: 200px;
+    height: 100px; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #004aad;
+    color: #fff;
+    margin: 20px;
+}

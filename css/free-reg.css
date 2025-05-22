@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	scrollbar-color: unset;
+	font-family: "Montserrat", "Open Sans", Roboto;
+	font-size: 1rem;
+}
+nav {
+	background-color: #004aad;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 0px 30px 0px;
+}
+nav .top-nav {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-nav img[alt="logo"] {
+	width: 100px;
+	margin-left: 4vw;
+}
+.top-nav .fa-bars {
+	margin-right: 4vw;
+	color: #fff;
+}
+.bottom-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bottom-nav h1 {
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.event-reg-wrapper {
+	width: 100vw;
+	height: calc(100vh - 21vh);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.event-reg {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.event-reg .top {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.event-reg .top input[name="phone"],
+.event-reg .top input[name="Name"],
+.event-reg .top input[name="email"] {
+	width: 350px;
+	padding: 10px 3px;
+	border: none;
+	border-bottom: 1.2px solid #1c2136;
+	outline: none;
+}
+.event-reg .top input[name="phone"]::placeholder,
+.event-reg .top input[name="Name"]::placeholder,
+.event-reg .top input[name="email"]::placeholder {
+	color: #1c2136;
+	font-weight: 450;
+}
+.remember-radio {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+.remember-radio > label {
+	font-size: 0.6rem;
+}
+.event-reg .bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+}
+.event-reg .bottom button {
+	width: fit-content;
+	padding: 10px 40px;
+	background-color: #004aad;
+	border: none;
+	color: #fff;
+	border-radius: 7px;
+	transition: all ease-out 0.2s;
+}
+.event-reg .bottom button:hover {
+	cursor: pointer;
+	padding: 15px 50px;
+	text-decoration: underline;
+	border-radius: 15px;
+}
+.event-reg .bottom .text {
+	font-size: 0.65rem;
+	text-decoration: none;
+	font-weight: 600;
+}
+.errMsg{
+	width: 80%; 
+	height: 50px; 
+	border: 1px solid #ff0000; 
+	color: #ff0000; 
+	margin: 20px; 
+	display:none;
+	justify-content: center;
+	align-items: center;
+}
+.show{
+	display: flex
+}
+
+/* Responsiveness: at most 2000px*/
+@media screen and (max-width: 450px) {
+	nav {
+		border-bottom-right-radius: 12px;
+		border-bottom-left-radius: 12px;
+		padding-bottom: 30px;
+	}
+	.bottom-nav h1 {
+		width: 100%;
+		margin: 0 6vw;
+		text-align: left;
+	}
+	.event-reg-wrapper {
+		height: calc(100vh - 30vh);
+	}
+	.event-reg {
+		width: 80%;
+	}
+	.event-reg .top input[name="phone"],
+	.event-reg .top input[name="Name"],
+	.event-reg .top input[name="email"] {
+		width: 100%;
+	}
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/sign-up.css"/>
+		<link rel="stylesheet" href="../css/menu.css" />
+		<title>Sign up</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+		</style>
+		<script src="../font-awesome.js" defer></script>
+	</head>
+	<body>
+		<nav>
+			<div class="top-nav">
+				<a href="./loading.html">
+					<img src="../icons/lynq light.png" alt="logo" />
+				</a>
+				<div class="icon" data-menuOpen style="cursor: pointer;">
+					<i class="fa-solid fa-bars white-icon"></i>
+				</div>
+				<ul data-menu>
+					<header>
+						<div class="stuff">
+							<h2>Menu</h2>
+							<div class="icon" data-menuClose>
+								<i class="fa-solid fa-times fa-xl"></i>
+							</div>
+						</div>
+						<hr>
+					</header>
+					<div class="menuItems">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="./sign-in.html">Register An Event</a></li>
+						<li><a href="#">Saved</a></li>
+					</div>
+				</ul>
+			</div>
+			<div class="bottom-nav">
+				<h1>Sign Up</h1>
+			</div>
+		</nav>
+		<div class="login-box-wrapper">
+			<div class="login-box">
+			<div class="errMsg" data-errMsg></div>
+				<div class="top">
+					<!-- <input type="text" name="name" id="name" placeholder="Name" /> -->
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder="Username"
+						data-userName
+					/>
+					<!-- <input type="email" name="email" id="email" placeholder="Email" /> -->
+					<input
+						type="tel"
+						name="phone"
+						id="phone"
+						placeholder="Phone Number"
+						data-phoneNumber
+					/>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						placeholder="Password"
+						data-password
+					/>
+					<input
+						type="password"
+						name="con-password"
+						id="con-password"
+						placeholder="Confirm Password"
+						data-confirmPassword
+					/>
+				</div>
+				<div class="bottom">
+					<button data-signUpBtn>
+						CREATE ACCOUNT
+					</button>
+					<p>already have an acct <a href="../index.html">Sign in</a></p>
+				</div>
+			</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+		<script src="../scripts/firebase-config.js"></script>
+		<script src="../scripts/signup.js" type="module"></script>
+		<script src="../scripts/menu.js"></script>
+	</body>
+</html>

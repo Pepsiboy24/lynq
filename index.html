@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="stylesheet" href="./css/menu.css" />
+		<title>Home</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+		</style>
+		
+	</head>
+	<body>
+		<nav>
+			<div class="top-nav">
+				<a href="./loading.html">
+					<img src="./icons/lynq logo.png" alt="logo" />
+				</a>
+				<div class="icon" data-menuOpen style="cursor: pointer;">
+					<i class="fa-solid fa-bars white-icon"></i>
+				</div>
+				<!-- <img src="./icons/menu.png" alt="menu" /> -->
+				<ul data-menu>
+					<header>
+						<!-- <a href=""></a> -->
+						<div class="stuff">
+							<h2>Menu</h2>
+							<div class="icon" data-menuClose>
+								<i class="fa-solid fa-times fa-xl"></i>
+							</div>
+						</div>
+						<hr>
+					</header>
+					<div class="menuItems">
+						<li><a href="./home.html">Home</a></li>
+						<li><a href="./html/sign-in.html">Register An Event</a></li>
+						<!-- <li><a href="#">Saved</a></li> -->
+					</div>
+				</ul>
+			</div>
+			<div class="bottom-nav">
+				<div class="search-box">
+					<input
+						type="search"
+						name="search-event"
+						id="search-event"
+						placeholder="Explore Events..."
+					/>
+					<button>
+						<span class="search-text">Search</span>
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+		<div class="trending-section">
+			
+			<h5>POPULAR</h5>
+			<div class="trending-events-wrapper">
+				<div class="trending-events">
+					<div
+						class="trending-event-card"
+						data-event
+						style="overflow: hidden;"
+					>
+						<img src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=600" alt="event image" style="width: 100%; height: 100%; object-fit: cover;" />
+						<div class="event-date">
+							<span class="month">JUNE</span>
+							<span class="day">13</span>
+						</div>
+					</div>
+					<div
+						class="trending-event-card"
+						data-event
+						style="overflow: hidden;"
+					>
+						<img src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=600" alt="event image" style="width: 100%; height: 100%; object-fit: cover;" />
+						
+						<div class="event-date">
+							<span class="month">JUNE</span>
+							<span class="day">21</span>
+						</div>
+					</div>
+					<div
+						class="trending-event-card"
+						data-event
+						style="overflow: hidden;"
+						>
+						<img src="https://images.pexels.com/photos/433452/pexels-photo-433452.jpeg?auto=compress&cs=tinysrgb&w=600" alt="event image" style="width: 100%; height: 100%; object-fit: cover;" />
+						<div class="event-date">
+							<span class="month">May</span>
+							<span class="day">07</span>
+						</div>
+					</div>
+					<div
+					class="trending-event-card"
+					data-event
+					style="overflow: hidden;"
+					>
+					<img src="https://images.pexels.com/photos/2311713/pexels-photo-2311713.jpeg?auto=compress&cs=tinysrgb&w=600" alt="event image" style="width: 100%; height: 100%; object-fit: cover;" />
+					<div class="event-date">
+						<span class="month">MAY</span>
+						<span class="day">21</span>
+					</div>
+					</div>
+					<div
+					class="trending-event-card"
+					data-event
+					style="overflow: hidden;"
+
+					>
+					<img src="https://images.pexels.com/photos/2402734/pexels-photo-2402734.jpeg?auto=compress&cs=tinysrgb&w=600" alt="event image" style="width: 100%; height: 100%; object-fit: cover;" />
+					<div class="event-date">
+						<span class="month">APR</span>
+						<span class="day">31</span>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="all-events-section">
+			<h5>CHECK OUT</h5>
+			<template data-template>
+				<div class="event-card" data-event>
+					<div class="event">
+						<img src="https://images.pexels.com/photos/1524620/pexels-photo-1524620.jpeg?auto=compress&cs=tinysrgb&w=600" alt="event image" style="width: 100%; height: 100%; object-fit: cover;" />
+						<div class="event-date">
+							<span class="month" data-month>APR</span>
+							<span class="day" data-day>21</span>
+						</div>
+						<div class="details">
+							<h5 data-nameOfEvent>Sports</h5>
+							<h4 data-type>Horse Racing</h4>
+						</div>
+					</div>
+				</div>
+			</template>
+			<div class="all-events" data-all-events></div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+		<script src="../scripts/firebase-config.js"></script>
+		<script src="./scripts/menu.js" defer></script>
+		 <script src="./scripts/home.js" defer></script>
+		<script src="./font-awesome.js" defer></script>
+	</body>
+</html>

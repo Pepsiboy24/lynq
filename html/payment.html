@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/payment.css" />
+		<title>Ticket Payment Page</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+		</style>
+		<script src="../font-awesome.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<nav>
+				<div class="top-nav">
+					<a href="./loading.html">
+						<img src="../icons/lynq light.png" alt="logo" />
+					</a>
+					<i class="fa-solid fa-bars fa-3x white-icon"></i>
+				</div>
+				<div class="bottom-nav">
+					<h1>
+						Ticket Payment <br />
+						Page
+					</h1>
+				</div>
+			</nav>
+			<main class="main-content">
+				<div class="total-amount">
+					<span>Your Total:</span>
+					<span class="amount">₦5000</span>
+				</div>
+				<form class="payment-form">
+					<label for="card-number">Card Number</label>
+					<input
+						type="text"
+						id="card-number"
+						placeholder="Enter card number"
+						required
+					/>
+					<div class="expiry-cvv">
+						<div>
+							<label for="expiry-date">Expiry Date</label>
+							<input
+								type="text"
+								id="expiry-date"
+								placeholder="MM/YY"
+								required
+							/>
+						</div>
+						<div>
+							<label for="cvv">CVV</label>
+							<input type="text" id="cvv" placeholder="CVV" required />
+						</div>
+					</div>
+
+					<label for="account-name">Account Name</label>
+					<input
+						type="text"
+						id="account-name"
+						placeholder="Enter account name"
+						required
+					/>
+
+					<div class="remember-account">
+						<input type="checkbox" id="remember-account" />
+						<label for="remember-account">Remember Account</label>
+					</div>
+
+					<div class="button-group">
+						<button
+							type="button"
+							class="cancel-button"
+							onclick="window.location.href='paid-reg.html'"
+						>
+							Cancel
+						</button>
+						<button
+							type="submit"
+							class="pay-button"
+							onclick="window.location.href='ticket.html'"
+						>
+							Pay Now
+						</button>
+					</div>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>
