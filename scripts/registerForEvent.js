@@ -1,6 +1,6 @@
-const  id = localStorage.getItem("id");  
-const db = firebase.database(); // Get the database instance
-const userRef = firebase.database().ref('users/' + id); // Reference to the user's data
+// const  id = localStorage.getItem("id");  
+// const db = firebase.database(); // Get the database instance
+// const userRef = firebase.database().ref('users/' + id); // Reference to the user's data
 
 const userName = document.querySelector("[data-name]")
 const phoneNum = document.querySelector("[data-phoneNumber]")
