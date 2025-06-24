@@ -21,23 +21,23 @@ registerBtn.addEventListener("click", (e) => {
         errMsg.textContent = "Inputs can't be blank"
     }else{
         errMsg.classList.remove("show")
-        const obj = {
-            userName: userNameValue,
-            phoneNumber: phoneNumValue,
-            email: emailValue
-        }
-        users.push(obj)
-        userRef.update({
-            newField: users // Add the new field with the array as its value
-          })
-          .then(() => {
+        // const obj = {
+        //     userName: userNameValue,
+        //     phoneNumber: phoneNumValue,
+        //     email: emailValue
+        // }
+        // users.push(obj)
+        // userRef.update({
+        //     newField: users // Add the new field with the array as its value
+        //   })
+          // .then(() => {
             console.log("New field added successfully!");
             const a = document.createElement("a")
             a.href = "./ticket.html"
             a.click();
-          })
-          .catch((error) => {
-            console.error("Error adding new field: ", error);
-          });
+          // })
+          // .catch((error) => {
+            // console.error("Error adding new field: ", error);
+          // });
     }
 })
